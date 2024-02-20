@@ -1,0 +1,107 @@
+<?php
+$image_url = "./img/doll.png";
+$birthday_text = "Happiest Birthday Ever";
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For special one</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- <img src="./img/DOLL.png" alt=""> -->
+    <img src="./img/KDS_6789.JPG" alt="">
+    <div class="center" id="center">
+        <h1>WELCOME</h1>
+        <div class="btn" id="soft">Hey Doll, Double Tap</div>
+        <div class="btn1" onclick=function()>Are You Busy , Really</div>
+    </div>
+    <div class="container">
+        <div class="dolll" id="hey">
+            <div class="envelop"></div>
+            <div class="front">
+
+            </div>
+            <div class="card">
+                <div class="text">Happy</br> Birthday</br> Yaar!</div>
+                <div class="heart"></div>
+            </div> 
+           </div>
+    </div>
+<div class="sepbtn" >
+            <div class="btn3" id="sepbtn">
+                ok now here</div>
+    </div>
+    <!-- <div class="shadow" id="hey1"></div> -->
+    </div>
+    <div class="container">
+        <div class="img">
+        <img class="imgdoll" src="./img/DOLL.png" alt="">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".container")
+                .mouseenter(function () {
+                    $(".card").stop().animate(
+                        {
+                            top: "-90px",
+                        },
+                        "slow"
+                    );
+                })
+                .mouseleave(function () {
+                    $(".card").stop().animate(
+                        {
+                            top: 0,
+                        },
+                        "slow"
+                    );
+                });
+        });
+
+        document.querySelector('.btn1').addEventListener('mouseover', function () {
+            var newX = Math.random() * (window.innerWidth - 100);
+            var newY = Math.random() * (window.innerHeight - 50);
+            this.style.bottom = newX + 'px';
+            this.style.top = newY + 'px';
+        });
+
+
+        document.getElementById("soft").onclick = function () {
+            var body = document.getElementById("center");
+            var envelope = document.getElementById("hey");
+            var shadow = document.getElementById("hey1");
+            var btn = document.getElementById("sepbtn");
+            if (envelope.style.display === "none") {
+
+                envelope.style.display = "block";
+                body.style.display = "none";
+                shadow.style.display = "none";
+                btn.style.display = "block";
+            } else {
+
+                envelope.style.display = "none";
+                body.style.display = "block";
+                shadow.style.display = "none";
+                btn.style.display = "none";
+
+            }
+        };
+
+
+    </script>
+    <script src="./assets/js/style.js"></script>
+
+
+
+
+</body>
+
+</html>
